@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
@@ -10,8 +11,10 @@ public class PlayerController : MonoBehaviour
     public float MouseInputBoxHeight;
     public float MouseInputBoxWidth;
     public float UnfoldTransitionTime;
+    public float UnfoldTransitionCameraSpeed = 1f;
     public CinemachineVirtualCamera VirtualCamera;
     public GameObject CameraTarget;
+    public MouseControlSettings MouseSettings;
 
     private AircraftController _aircraftController;
     private Quaternion _cameraTargetRotation;
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         switch (_aircraftState)
         {
+            case AircraftState.WingsTransitioningToUnfolded:
             case AircraftState.WingsUnfolded:
                 UpdateWingsUnfoldedState();
                 break;
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
+        UpdateCamera();
         UpdateRocketBooster();
 
         Variables.PlayerAircraftTransform = transform;
@@ -43,14 +48,43 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateWingsFoldedState()
     {
-        CameraTarget.transform.rotation = _cameraTargetRotation;
+        //if (_aircraftState == AircraftState.WingsTransitioningToUnfolded)
+        //{
+        //    CameraTarget.transform.rotation = Quaternion.RotateTowards(CameraTarget.transform.rotation, _cameraTargetRotation, Time.deltaTime * 1f);
+        //}
+        //else
+        //{
+        //    CameraTarget.transform.rotation = _cameraTargetRotation;
+        //}
+    }
+
+    private void UpdateCamera()
+    {
+        CameraTarget.transform.position = transform.position;
+        if (_aircraftState == AircraftState.WingsTransitioningToUnfolded)
+        {
+            CameraTarget.transform.rotation = Quaternion.RotateTowards(CameraTarget.transform.rotation, transform.rotation, Time.deltaTime * UnfoldTransitionCameraSpeed);
+        }
+        else if (_aircraftState == AircraftState.WingsUnfolded)
+        {
+            CameraTarget.transform.rotation = transform.rotation;
+        }
     }
 
     private void UpdateWingsUnfoldedState()
     {
+
         _aircraftController.ApplyForwardForce();
-        _aircraftController.ApplyPitch(GetVerticalInput());
-        _aircraftController.ApplyRoll(GetHorizontalInput());
+
+        if (_aircraftState == AircraftState.WingsTransitioningToUnfolded)
+        {
+            return;
+        }
+
+        var horizontalInput = GetHorizontalInput();
+        _aircraftController.ApplyPitch(GetVerticalInput() - (Mathf.Abs(horizontalInput) * MouseSettings.HorizontalInputAffectOnPitch));
+        _aircraftController.ApplyRoll(horizontalInput);
+        _aircraftController.ApplyYaw(-horizontalInput * MouseSettings.HorizontalInputAffectOnYaw);
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -72,6 +106,14 @@ public class PlayerController : MonoBehaviour
             EnterFoldedWingState();
             _aircraftController.FlipLeft();
         }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            _aircraftController.ApplyRoll(-1f);
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            _aircraftController.ApplyRoll(1f);
+        }
     }
 
     private void UpdateRocketBooster()
@@ -81,10 +123,6 @@ public class PlayerController : MonoBehaviour
             if (_aircraftState == AircraftState.WingsFolded)
             {
                 EnterUnfoldedWingState();
-            }
-            if (_aircraftState == AircraftState.WingsTransitioningToUnfolded)
-            {
-                _aircraftController.ApplyForwardForce();
             }
             _aircraftController.EnableRocket();
         }
@@ -98,18 +136,18 @@ public class PlayerController : MonoBehaviour
     {
         _aircraftController.FoldWings();
         _aircraftState = AircraftState.WingsFolded;
-        VirtualCamera.gameObject.SetActive(false);
+        //VirtualCamera.gameObject.SetActive(false);
         _cameraTargetRotation = CameraTarget.transform.rotation;
     }
 
     private void EnterUnfoldedWingState()
     {
         _aircraftController.UnflodWings();
-        CameraTarget.transform.rotation = transform.rotation;
         _aircraftState = AircraftState.WingsTransitioningToUnfolded;
         StartCoroutine(TransitionToUnfoldedWings());
-        StartCoroutine(EnableCamera());
+        //StartCoroutine(EnableCamera());
         VirtualCamera.gameObject.SetActive(true);
+        _cameraTargetRotation = transform.rotation;
     }
 
     private IEnumerator TransitionToUnfoldedWings()
@@ -120,7 +158,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator EnableCamera()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         if (_aircraftState == AircraftState.WingsUnfolded)
         {
             VirtualCamera.gameObject.SetActive(true);
@@ -165,4 +203,13 @@ public class PlayerController : MonoBehaviour
         //UnityEditor.Handles.DrawSolidRectangleWithOutline(rect, Color.clear, Color.green);
         //UnityEditor.Handles.EndGUI();
     }
+}
+
+[Serializable]
+public class MouseControlSettings
+{
+    [Range(0f, 1f)]
+    public float HorizontalInputAffectOnPitch = 0f;
+    [Range(0f, 1f)]
+    public float HorizontalInputAffectOnYaw = 0f;
 }

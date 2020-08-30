@@ -10,6 +10,7 @@ public class GunController : MonoBehaviour
     public float ShootForce = 1000f;
     public float FireRate = 3f;
     public float ProjectileLifetime = 10f;
+    public float BulletSpread = 0;
 
     private float _timeSinceLastShot = 10000f;
     private float _timeBetweenShots = 1f;
@@ -42,12 +43,16 @@ public class GunController : MonoBehaviour
 
     private void FireProjectile()
     {
-        var projectile = Instantiate(ProjectilePrefab);
-        projectile.transform.position = ProjectileSpawnLocations[_projectileSpawnIndex].position;
-        projectile.transform.rotation = transform.rotation;
+        var projectile = Instantiate(ProjectilePrefab, ProjectileSpawnLocations[_projectileSpawnIndex].position, transform.rotation);
         var rigidBody = projectile.GetComponent<Rigidbody>();
         rigidBody.velocity += _rigidbody.velocity;
-        rigidBody.AddForce(projectile.transform.forward * ShootForce);
+
+        var projectileDirection = new Vector3(
+            projectile.transform.forward.x + Random.Range(-BulletSpread, BulletSpread),
+            projectile.transform.forward.y + Random.Range(-BulletSpread, BulletSpread),
+            projectile.transform.forward.z + Random.Range(-BulletSpread, BulletSpread));
+
+        rigidBody.AddForce(projectileDirection * ShootForce);
 
         Destroy(projectile, ProjectileLifetime);
     }
