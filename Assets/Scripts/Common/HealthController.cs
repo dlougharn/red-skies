@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
+    public bool IsPlayer;
     public float DamageOnHit = 1f;
     public float MaxHealth = 50;
+    public float CurrentHealth = 0;
     public GameObject DeathParticleEffect;
 
-    private float _currentHealth = 0;
     private bool _isDead = false;
+    private string _damageTag;
 
     // Start is called before the first frame update
     void Start()
     {
-        _currentHealth = MaxHealth;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        CurrentHealth = MaxHealth;
+        if (IsPlayer)
+        {
+            _damageTag = "EnemyProjectile";
+        }
+        else
+        {
+            _damageTag = "PlayerProjectile";
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -30,13 +34,14 @@ public class HealthController : MonoBehaviour
             return;
         }
 
-        if (collision.gameObject.tag == "Projectile")
+        if (collision.gameObject.tag == _damageTag)
         {
-            _currentHealth -= DamageOnHit;
-            if (_currentHealth <= 0)
+            CurrentHealth -= DamageOnHit;
+            if (CurrentHealth <= 0)
             {
-                Instantiate(DeathParticleEffect, transform.position, transform.rotation);
+                var particleEffect = Instantiate(DeathParticleEffect, transform.position, transform.rotation);
                 _isDead = true;
+                Destroy(particleEffect, 20f);
                 Destroy(gameObject);
             }
         }

@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CustomCursor : MonoBehaviour
 {
     public Texture2D CursorTexture;
 
+    private Image _cursorImage;
+
     // Use this for initialization
     void Start()
     {
-        //var cursorOffset = new Vector2(CursorTexture.width / 2, CursorTexture.height / 2);
-        //Cursor.SetCursor(CursorTexture, cursorOffset, CursorMode.Auto);
         Cursor.visible = false;
+        _cursorImage = GetComponent<Image>();
     }
 
     private void Update()

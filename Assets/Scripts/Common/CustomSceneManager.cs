@@ -61,6 +61,8 @@ public class CustomSceneManager : MonoBehaviour
             print("Loading scene");
             yield return SceneManager.LoadSceneAsync(additiveScene, LoadSceneMode.Additive);
         }
+
+        Destroy(this.gameObject);
     }
 }
 

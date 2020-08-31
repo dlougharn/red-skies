@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7888598740885116256}
   - component: {fileID: 5317412921137923811}
   - component: {fileID: 2554286299912609806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044037983631987132}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0, z: 0.629}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 0.092938, y: 0.092938, z: 0.092938}
   m_Children: []
   m_Father: {fileID: 8724351181169656137}
@@ -188,9 +188,10 @@ GameObject:
   - component: {fileID: 8724351181169656137}
   - component: {fileID: 8329512462606297950}
   - component: {fileID: 8604168785815369033}
-  m_Layer: 0
+  - component: {fileID: -6470821021654682221}
+  m_Layer: 8
   m_Name: PlayerGunProjectile
-  m_TagString: Projectile
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,3 +241,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6470821021654682221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5920855982985038388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbbc6fde9b61bf4cbe47506fcd8d091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaterParticleEffectPrefab: {fileID: 3843606872068858686, guid: deaee2e9dc4ca9447a778d9a2315ea55,
+    type: 3}
+  AircraftHitParticleEffectPrefab: {fileID: 5952861274265003927, guid: 3acd76bcc20e9304b95fe5fa3395b62b,
+    type: 3}

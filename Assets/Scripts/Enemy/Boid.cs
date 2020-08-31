@@ -36,15 +36,15 @@ public class Boid : MonoBehaviour
 
         if (_target != null)
         {
-            Vector3 offsetToTarget = (_target.position - transform.position);
-            acceleration = SteerTowards(offsetToTarget) * _boidSettings.TargetWeight;
+            var offsetToTarget = (_target.position - transform.position);
+            acceleration = SteerTowards(offsetToTarget) * _boidSettings.TargetWeight * Vector3.Distance(_target.position, transform.position);
         }
 
         if (NumPerceivedFlockmates != 0)
         {
             CentreOfFlockmates /= NumPerceivedFlockmates;
 
-            Vector3 offsetToFlockmatesCentre = (CentreOfFlockmates - transform.position);
+            var offsetToFlockmatesCentre = (CentreOfFlockmates - transform.position);
 
             var alignmentForce = SteerTowards(AvgFlockHeading) * _boidSettings.AlignWeight;
             var cohesionForce = SteerTowards(offsetToFlockmatesCentre) * _boidSettings.CohesionWeight;
@@ -98,5 +98,10 @@ public class Boid : MonoBehaviour
     {
         Vector3 v = vector.normalized * _boidSettings.MaxSpeed - _velocity;
         return Vector3.ClampMagnitude(v, _boidSettings.MaxSteerForce);
+    }
+
+    public void SetTarget(Transform target)
+    {
+        _target = target;
     }
 }

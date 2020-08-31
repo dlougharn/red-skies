@@ -88,31 +88,75 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            EnterFoldedWingState();
-            _aircraftController.FlipForward();
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                EnterFoldedWingState();
+                _aircraftController.FlipForward();
+            }
+            else
+            {
+                _aircraftController.ApplyPitch(-1f);
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {
-            EnterFoldedWingState();
-            _aircraftController.FlipBackward();
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                EnterFoldedWingState();
+                _aircraftController.FlipBackward();
+            }
+            else
+            {
+                _aircraftController.ApplyPitch(1f);
+            }
         }
         if (Input.GetKey(KeyCode.A))
         {
-            EnterFoldedWingState();
-            _aircraftController.FlipRight();
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                EnterFoldedWingState();
+                _aircraftController.SpinRight();
+            }
+            else
+            {
+                _aircraftController.ApplyRoll(-1f);
+            }
         }
         if (Input.GetKey(KeyCode.D))
         {
-            EnterFoldedWingState();
-            _aircraftController.FlipLeft();
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                EnterFoldedWingState();
+                _aircraftController.SpinLeft();
+            }
+            else
+            {
+                _aircraftController.ApplyRoll(1f);
+            }
         }
         if (Input.GetKey(KeyCode.Q))
         {
-            _aircraftController.ApplyRoll(-1f);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                EnterFoldedWingState();
+                _aircraftController.FlipLeft();
+            }
+            else
+            {
+                _aircraftController.ApplyYaw(1f);
+            }
         }
         if (Input.GetKey(KeyCode.E))
         {
-            _aircraftController.ApplyRoll(1f);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                EnterFoldedWingState();
+                _aircraftController.FlipRight();
+            }
+            else
+            {
+                _aircraftController.ApplyYaw(-1f);
+            }
         }
     }
 

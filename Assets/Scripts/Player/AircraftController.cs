@@ -13,6 +13,7 @@ public class AircraftController : MonoBehaviour
     public float YawPower;
     public float PitchFlipPower;
     public float YawFlipPower;
+    public float RollFlipPower;
     public float DebugRayMultiplier = 0.0001f;
     public float WingSpan = 13.56f;
     public float WingArea = 78.04f;
@@ -107,12 +108,22 @@ public class AircraftController : MonoBehaviour
 
     public void FlipLeft()
     {
-        ApplyYaw(-YawFlipPower);
+        ApplyYaw(YawFlipPower);
     }
 
     public void FlipRight()
     {
-        ApplyYaw(YawFlipPower);
+        ApplyYaw(-YawFlipPower);
+    }
+
+    public void SpinRight()
+    {
+        ApplyRoll(-RollFlipPower);
+    }
+
+    public void SpinLeft()
+    {
+        ApplyRoll(RollFlipPower);
     }
 
     /// <summary>
