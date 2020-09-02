@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1731745708" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MainGame</ObjectPath>
+			<ShortName>MainGame</ShortName>
+			<Path>MainGame.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3743400261" Name="Big_Explosion" ObjectPath="\Events\Default Work Unit\Big_Explosion" MaxAttenuation="4000.000000" DurationType="OneShot" DurationMin="8.891995" DurationMax="8.891995">
+					<IncludedMemoryFiles>
+						<File Id="536682469" Language="SFX">
+							<ShortName>93844__cgeffex__huge-explosion4.wav</ShortName>
+							<Path>SFX\93844__cgeffex__huge-explosion4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1003595699" Name="Boost_Engine" ObjectPath="\Events\Default Work Unit\Boost_Engine" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="234359922" Language="SFX">
+							<ShortName>19852__freqman__cooling-tower-fan.wav</ShortName>
+							<Path>SFX\19852__freqman__cooling-tower-fan_BECCA213.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="973466135" Name="Bullet_Hit_Metal" ObjectPath="\Events\Default Work Unit\Bullet_Hit_Metal" DurationType="OneShot" DurationMin="1.846145" DurationMax="1.846145">
+					<IncludedMemoryFiles>
+						<File Id="679350256" Language="SFX">
+							<ShortName>522507__filmmakersmanual__bullet-metal-hit-3(1).wav</ShortName>
+							<Path>SFX\522507__filmmakersmanual__bullet-metal-hit-3(1)_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2044049779" Name="Dead" ObjectPath="\Events\Default Work Unit\Dead" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="13776098" Name="Explosion" ObjectPath="\Events\Default Work Unit\Explosion" MaxAttenuation="4000.000000" DurationType="OneShot" DurationMin="5.466823" DurationMax="5.466823">
+					<IncludedMemoryFiles>
+						<File Id="540058769" Language="SFX">
+							<ShortName>102734__sarge4267__explosion4.wav</ShortName>
+							<Path>SFX\102734__sarge4267__explosion4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2517641552" Name="Gun_Fire" ObjectPath="\Events\Default Work Unit\Gun_Fire" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="477552394" Language="SFX">
+							<ShortName>464564__soundfx-studio__spitfire-hispano-mk2-cannon-firing.wav</ShortName>
+							<Path>SFX\464564__soundfx-studio__spitfire-hispano-mk2-cannon-firing_B3EFE447.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1460032346" Name="Hover_Big" ObjectPath="\Events\Default Work Unit\Hover_Big" MaxAttenuation="1500.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="889791056" Language="SFX">
+							<ShortName>375963__glitchedtones__spacecraft-hover-01.wav</ShortName>
+							<Path>SFX\375963__glitchedtones__spacecraft-hover-01_72F3ECD2.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3808948909" Name="Hover_Small" ObjectPath="\Events\Default Work Unit\Hover_Small" MaxAttenuation="1000.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="30371044" Language="SFX">
+							<ShortName>213384__peridactyloptrix__hover-engine.wav</ShortName>
+							<Path>SFX\213384__peridactyloptrix__hover-engine_AD2C00BD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2799500896" Name="Laser_Gun_Fire" ObjectPath="\Events\Default Work Unit\Laser_Gun_Fire" MaxAttenuation="1000.000000" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="864491586" Language="SFX">
+							<ShortName>lazer_gun2.wav</ShortName>
+							<Path>SFX\lazer_gun2_51C68024.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2501370510" Name="Plane_Engine" ObjectPath="\Events\Default Work Unit\Plane_Engine" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="726581805" Language="SFX">
+							<ShortName>457013__suburbanwizard__propeller.wav</ShortName>
+							<Path>SFX\457013__suburbanwizard__propeller_4AB613A6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1067196506" Name="Stop_Boost_Engine" ObjectPath="\Events\Default Work Unit\Stop_Boost_Engine" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1434271473" Name="Stop_Gun_Fire" ObjectPath="\Events\Default Work Unit\Stop_Gun_Fire" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3314805725" Name="Stop_Hover_Big" ObjectPath="\Events\Default Work Unit\Stop_Hover_Big" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2320894794" Name="Stop_Hover_Small" ObjectPath="\Events\Default Work Unit\Stop_Hover_Small" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2460523821" Name="Stop_Laser_Gun_Fire" ObjectPath="\Events\Default Work Unit\Stop_Laser_Gun_Fire" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3651761334" Name="Wing_Fold" ObjectPath="\Events\Default Work Unit\Wing_Fold" DurationType="OneShot" DurationMin="0.828073" DurationMax="0.828073">
+					<IncludedMemoryFiles>
+						<File Id="530581858" Language="SFX">
+							<ShortName>m1_garand_ping.wav</ShortName>
+							<Path>SFX\m1_garand_ping_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

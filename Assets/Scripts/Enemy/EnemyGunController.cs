@@ -10,6 +10,7 @@ public class EnemyGunController : MonoBehaviour
 
     private GunController _gunController;
     private bool _isDisabled = true;
+    private bool _gunEnabled = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,23 +23,29 @@ public class EnemyGunController : MonoBehaviour
     {
         if (_isDisabled)
         {
+            AkSoundEngine.PostEvent("Stop_Laser_Gun_Fire", gameObject);
             return;
         }
 
         if (Target == null)
         {
             _gunController.DisableGun();
+            AkSoundEngine.PostEvent("Stop_Laser_Gun_Fire", gameObject);
             return;
         }
 
         var direction = Target.position - transform.position;
-        if (Vector3.Dot(direction, transform.forward) > ActivateGunThreshold)
+        if (!_gunEnabled && Vector3.Dot(direction, transform.forward) > ActivateGunThreshold)
         {
+            _gunEnabled = true;
             _gunController.EnableGun();
+            AkSoundEngine.PostEvent("Laser_Gun_Fire", gameObject);
         }
-        else
+        else if (_gunEnabled && Vector3.Dot(direction, transform.forward) <= ActivateGunThreshold)
         {
+            _gunEnabled = false;
             _gunController.DisableGun();
+            AkSoundEngine.PostEvent("Stop_Laser_Gun_Fire", gameObject);
         }
     }
 

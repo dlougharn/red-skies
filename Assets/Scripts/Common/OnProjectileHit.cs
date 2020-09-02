@@ -18,6 +18,11 @@ public class OnProjectileHit : MonoBehaviour
         {
             var particleEffect = Instantiate(AircraftHitParticleEffectPrefab, transform.position, transform.rotation);
             Destroy(particleEffect, 5f);
+
+            if (collision.gameObject.tag == "Player")
+            {
+                AkSoundEngine.PostEvent("Bullet_Hit_Metal", collision.gameObject);
+            }
         }
     }
 }

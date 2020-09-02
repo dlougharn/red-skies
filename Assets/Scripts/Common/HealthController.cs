@@ -9,6 +9,7 @@ public class HealthController : MonoBehaviour
     public float MaxHealth = 50;
     public float CurrentHealth = 0;
     public GameObject DeathParticleEffect;
+    public string ExplosionSoundEvent = "Explosion";
 
     private bool _isDead = false;
     private string _damageTag;
@@ -41,6 +42,11 @@ public class HealthController : MonoBehaviour
             {
                 var particleEffect = Instantiate(DeathParticleEffect, transform.position, transform.rotation);
                 _isDead = true;
+                AkSoundEngine.PostEvent(ExplosionSoundEvent, gameObject);
+                if (IsPlayer)
+                {
+                    AkSoundEngine.PostEvent("Dead", gameObject);
+                }
                 Destroy(particleEffect, 20f);
                 Destroy(gameObject);
             }

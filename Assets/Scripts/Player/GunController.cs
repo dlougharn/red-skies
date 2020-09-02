@@ -11,7 +11,6 @@ public class GunController : MonoBehaviour
     public float FireRate = 3f;
     public float ProjectileLifetime = 10f;
     public float BulletSpread = 0;
-    public bool IsPlayerGun = false;
 
     private bool _gunEnabled = false;
     private float _timeSinceLastShot = 10000f;
@@ -35,22 +34,12 @@ public class GunController : MonoBehaviour
         }
 
         _timeSinceLastShot += Time.deltaTime;
-        if (_timeSinceLastShot >= _timeBetweenShots && GunEnabled())
+        if (_timeSinceLastShot >= _timeBetweenShots && _gunEnabled)
         {
             UpdateSpawnIndex();
             FireProjectile();
             _timeSinceLastShot = 0f;
         }
-    }
-
-    private bool GunEnabled()
-    {
-        if (IsPlayerGun && Input.GetMouseButton(0))
-        {
-            return true;
-        }
-
-        return !IsPlayerGun && _gunEnabled;
     }
 
     private void UpdateSpawnIndex()
@@ -85,5 +74,10 @@ public class GunController : MonoBehaviour
     public void DisableGun()
     {
         _gunEnabled = false;
+    }
+
+    private void UpdateSound()
+    {
+
     }
 }

@@ -1,0 +1,36 @@
+Event	ID	Name			Wwise Object Path	Notes
+	13776098	Explosion			\Default Work Unit\Explosion	
+	973466135	Bullet_Hit_Metal			\Default Work Unit\Bullet_Hit_Metal	
+	1003595699	Boost_Engine			\Default Work Unit\Boost_Engine	
+	1067196506	Stop_Boost_Engine			\Default Work Unit\Stop_Boost_Engine	
+	1434271473	Stop_Gun_Fire			\Default Work Unit\Stop_Gun_Fire	
+	1460032346	Hover_Big			\Default Work Unit\Hover_Big	
+	2044049779	Dead			\Default Work Unit\Dead	
+	2320894794	Stop_Hover_Small			\Default Work Unit\Stop_Hover_Small	
+	2460523821	Stop_Laser_Gun_Fire			\Default Work Unit\Stop_Laser_Gun_Fire	
+	2501370510	Plane_Engine			\Default Work Unit\Plane_Engine	
+	2517641552	Gun_Fire			\Default Work Unit\Gun_Fire	
+	2799500896	Laser_Gun_Fire			\Default Work Unit\Laser_Gun_Fire	
+	3314805725	Stop_Hover_Big			\Default Work Unit\Stop_Hover_Big	
+	3651761334	Wing_Fold			\Default Work Unit\Wing_Fold	
+	3743400261	Big_Explosion			\Default Work Unit\Big_Explosion	
+	3808948909	Hover_Small			\Default Work Unit\Hover_Small	
+
+Effect plug-ins	ID	Name	Type				Notes
+	287224143	New_Wwise_Time_Stretch	Wwise Time Stretch			
+	2098638826	Underground_Parking1	Wwise Matrix Reverb			
+	2662085913	Large_Church1	Wwise Matrix Reverb			
+	4191034910	ping_pitch	Wwise Pitch Shifter			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	30371044	hover_small	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\213384__peridactyloptrix__hover-engine_AD2C00BD.wem		\Actor-Mixer Hierarchy\Default Work Unit\hover_small		8894884
+	234359922	engine_boost	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\19852__freqman__cooling-tower-fan_BECCA213.wem		\Actor-Mixer Hierarchy\Default Work Unit\engine_boost		3180464
+	477552394	gun_fire	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\464564__soundfx-studio__spitfire-hispano-mk2-cannon-firing_B3EFE447.wem		\Actor-Mixer Hierarchy\Default Work Unit\gun_fire		1113408
+	530581858	m1_garand_ping	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\m1_garand_ping_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\m1_garand_ping		73100
+	536682469	big_explosion	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\93844__cgeffex__huge-explosion4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\big_explosion		1568612
+	540058769	explosion	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\102734__sarge4267__explosion4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\explosion		1049692
+	679350256	bullet_hit_metal	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\522507__filmmakersmanual__bullet-metal-hit-3(1)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bullet_hit_metal		325788
+	726581805	engine_sound	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\457013__suburbanwizard__propeller_4AB613A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\engine_sound		4010180
+	864491586	laser_gun	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\lazer_gun2_51C68024.wem		\Actor-Mixer Hierarchy\Default Work Unit\laser_gun		217456
+	889791056	hover_big	E:\Projects\Unity\RedSkies\Red Skies\Red Skies_WwiseProject\.cache\Mac\SFX\375963__glitchedtones__spacecraft-hover-01_72F3ECD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\hover_big		567324
+

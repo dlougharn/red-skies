@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8E6D6F0C-68AC-4217-A012-3C38F7AC346A}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{8E6D6F0C-68AC-4217-A012-3C38F7AC346A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="engine_sound" ID="{B6B8B31C-ABAF-4FAA-BCC0-870ABB626E85}" ShortID="1066220428">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="457013__suburbanwizard__propeller" ID="{AAC40769-BF22-4E5A-840F-E46ED72F6D6C}">
+							<PropertyList>
+								<Property Name="LoopEnd" Type="Real64" Value="22.5150673758865"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>457013__suburbanwizard__propeller.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="726581805"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="457013__suburbanwizard__propeller" ID="{AAC40769-BF22-4E5A-840F-E46ED72F6D6C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="gun_fire" ID="{725F72E0-C7F8-47D2-84A3-09295DFEFE0C}" ShortID="348772899">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="464564__soundfx-studio__spitfire-hispano-mk2-cannon-firing" ID="{5C5716A9-0B20-4CC7-A2B9-44D15B49350C}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.191621797655232"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0127747865103487"/>
+								<Property Name="LoopBegin" Type="Real64" Value="5.04604067158778"/>
+								<Property Name="LoopEnd" Type="Real64" Value="9.00622448979592"/>
+								<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="4.91829280648429"/>
+								<Property Name="TrimEnd" Type="Real64" Value="11.2290373425966"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>464564__soundfx-studio__spitfire-hispano-mk2-cannon-firing.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="477552394"/>
+							</MediaIDList>
+							<PluginInnerObjectList>
+								<List Name="Markers">
+									<PluginInnerObject Name="" ID="{B02021D1-41F8-41F9-BB5A-5919E047AD72}" PluginName="Marker" CompanyID="0" PluginID="993">
+										<PropertyList>
+											<Property Name="Time" Type="Real64" Value="9.03177406281662"/>
+										</PropertyList>
+									</PluginInnerObject>
+								</List>
+							</PluginInnerObjectList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="464564__soundfx-studio__spitfire-hispano-mk2-cannon-firing" ID="{5C5716A9-0B20-4CC7-A2B9-44D15B49350C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="engine_boost" ID="{D89E8E0B-F9FC-43DF-9485-B8E5797EDFB1}" ShortID="222711568">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+							<ObjectRef Name="New_Wwise_Time_Stretch" ID="{0844603C-E15D-4C3A-B9F7-BA75C5E80017}" WorkUnitID="{7C43AAA4-8D17-4404-B6E1-F4DC2ADF2E4E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="346034__insintesi__jet-engine-1" ID="{27220D5F-9FA3-4732-BC9A-7B3F809D92DF}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.945342162396875"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="3.12690099869735"/>
+								<Property Name="LoopBegin" Type="Real64" Value="0.83626422058185"/>
+								<Property Name="LoopEnd" Type="Real64" Value="30.8690575336518"/>
+								<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>346034__insintesi__jet-engine-1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="224898650"/>
+							</MediaIDList>
+							<PluginInnerObjectList>
+								<List Name="Markers">
+									<PluginInnerObject Name="" ID="{B7FE01C4-02A9-4E44-B33A-E108CEDC00D6}" PluginName="Marker" CompanyID="0" PluginID="993">
+										<PropertyList>
+											<Property Name="Time" Type="Real64" Value="30.8690575336518"/>
+										</PropertyList>
+									</PluginInnerObject>
+								</List>
+							</PluginInnerObjectList>
+						</AudioFileSource>
+						<AudioFileSource Name="Nitrous Oxide-SoundBible_com-1970581121" ID="{2AE0DF34-131D-40CF-8372-211C4D8BF7FB}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Nitrous Oxide-SoundBible.com-1970581121.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="619410931"/>
+							</MediaIDList>
+						</AudioFileSource>
+						<AudioFileSource Name="404333__strexet__nitro-activation" ID="{7F3DBAA0-93FC-426B-839A-1D27272AB5CB}">
+							<PropertyList>
+								<Property Name="CrossfadeDuration" Type="Real64" Value="0.1"/>
+								<Property Name="LoopBegin" Type="Real64" Value="1.71671901595745"/>
+								<Property Name="LoopEnd" Type="Real64" Value="2.24294946808511"/>
+								<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>404333__strexet__nitro-activation.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="724579788"/>
+							</MediaIDList>
+							<PluginInnerObjectList>
+								<List Name="Markers">
+									<PluginInnerObject Name="" ID="{11BD9ADA-1C49-473E-9693-02E11A884799}" PluginName="Marker" CompanyID="0" PluginID="993">
+										<PropertyList>
+											<Property Name="Time" Type="Real64" Value="2.24582504432624"/>
+										</PropertyList>
+									</PluginInnerObject>
+								</List>
+							</PluginInnerObjectList>
+						</AudioFileSource>
+						<AudioFileSource Name="19852__freqman__cooling-tower-fan" ID="{DAA36C35-63D7-4D92-9A16-2045D12618B8}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.855795339412362"/>
+								<Property Name="LoopBegin" Type="Real64" Value="2.16801485984465"/>
+								<Property Name="LoopEnd" Type="Real64" Value="16.8306416751098"/>
+								<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="18.0287551502871"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>19852__freqman__cooling-tower-fan.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="234359922"/>
+							</MediaIDList>
+							<PluginInnerObjectList>
+								<List Name="Markers">
+									<PluginInnerObject Name="" ID="{9AE9E166-C8A1-4B82-B448-EAA24EA657F1}" PluginName="Marker" CompanyID="0" PluginID="993">
+										<PropertyList>
+											<Property Name="Time" Type="Real64" Value="16.8591681864235"/>
+										</PropertyList>
+									</PluginInnerObject>
+								</List>
+							</PluginInnerObjectList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="19852__freqman__cooling-tower-fan" ID="{DAA36C35-63D7-4D92-9A16-2045D12618B8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="explosion" ID="{0D5C14B9-7FAB-4D0A-9215-29A6F68CE041}" ShortID="752315692">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="small_explosion" ID="{824CA623-9B86-4465-96B1-CDB667D1C49F}" WorkUnitID="{853FDF39-A89B-4DBC-95DD-BDD5C47876E9}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="102734__sarge4267__explosion4" ID="{0C3853F8-300F-4A52-8307-8AA786652772}">
+							<Language>SFX</Language>
+							<AudioFile>102734__sarge4267__explosion4.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="540058769"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="102734__sarge4267__explosion4" ID="{0C3853F8-300F-4A52-8307-8AA786652772}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="big_explosion" ID="{6332A643-31A7-424B-9185-72B2C8C47114}" ShortID="719104213">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="big_explosion" ID="{8CC8BFEE-36FE-4C8C-8654-B791E27DD286}" WorkUnitID="{853FDF39-A89B-4DBC-95DD-BDD5C47876E9}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="93844__cgeffex__huge-explosion4" ID="{C1ECEC50-7395-4280-B3FB-8DD8EABDB188}">
+							<Language>SFX</Language>
+							<AudioFile>93844__cgeffex__huge-explosion4.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="536682469"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="93844__cgeffex__huge-explosion4" ID="{C1ECEC50-7395-4280-B3FB-8DD8EABDB188}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="m1_garand_ping" ID="{150AD1BD-F6C5-475F-A868-DB3589C3D6DC}" ShortID="960298618">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+							<ObjectRef Name="ping_pitch" ID="{C598081A-2802-4918-9B34-404DB8191FC8}" WorkUnitID="{7C43AAA4-8D17-4404-B6E1-F4DC2ADF2E4E}"/>
+						</Reference>
+						<Reference Name="Effect1" CompanyID="4095" PluginID="65535" PluginType="15">
+							<ObjectRef Name="Underground_Parking1" ID="{8DA66AA3-6CA0-41A0-B7A2-BB6FCABFCDA8}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="m1_garand_ping" ID="{D9C7AACD-0832-49DA-841B-B9B667505182}">
+							<Language>SFX</Language>
+							<AudioFile>m1_garand_ping.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="530581858"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="m1_garand_ping" ID="{D9C7AACD-0832-49DA-841B-B9B667505182}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bullet_hit_metal" ID="{5D333727-F44C-4B86-94BE-E75E0B2DE4DA}" ShortID="28580220">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="522507__filmmakersmanual__bullet-metal-hit-3(1)" ID="{47E990EC-176F-48B0-B207-55759F366791}">
+							<Language>SFX</Language>
+							<AudioFile>522507__filmmakersmanual__bullet-metal-hit-3(1).wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="679350256"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="522507__filmmakersmanual__bullet-metal-hit-3(1)" ID="{47E990EC-176F-48B0-B207-55759F366791}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="laser_gun" ID="{EB454CE1-5D08-4D78-BFA2-28DFC93E7CE9}" ShortID="502384799">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>43</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>33</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="New Attenuation" ID="{7CC7CF12-A6CF-474E-88A3-A17827964630}" WorkUnitID="{853FDF39-A89B-4DBC-95DD-BDD5C47876E9}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="lazer_gun2" ID="{2D0AF0F2-461F-4D58-8EDC-4A418482A8B3}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0808510638297872"/>
+								<Property Name="LoopBegin" Type="Real64" Value="0.106382978723404"/>
+								<Property Name="LoopEnd" Type="Real64" Value="0.748936170212766"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.13191489361702"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>lazer_gun2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="864491586"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="lazer_gun2" ID="{2D0AF0F2-461F-4D58-8EDC-4A418482A8B3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="hover_small" ID="{A7CEC2EF-EF35-427E-BC76-2556A34B5DC1}" ShortID="948205493">
+					<PropertyList>
+						<Property Name="3DPosition" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-11</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="New Attenuation" ID="{7CC7CF12-A6CF-474E-88A3-A17827964630}" WorkUnitID="{853FDF39-A89B-4DBC-95DD-BDD5C47876E9}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="213384__peridactyloptrix__hover-engine" ID="{E85E181C-E7F6-464C-B447-62BC9B659B0B}">
+							<PropertyList>
+								<Property Name="CrossfadeDuration" Type="Real64" Value="0.5"/>
+								<Property Name="LoopBegin" Type="Real64" Value="4.79696456117021"/>
+								<Property Name="LoopEnd" Type="Real64" Value="41.0641251994681"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="3.22421297089041"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>213384__peridactyloptrix__hover-engine.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="30371044"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{D6C2FB92-08D7-4072-99EE-FD92994773EC}"/>
+						<Position Name="" ID="{F83A8A65-4948-4CCF-A8FC-9D315AAD9AED}"/>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="213384__peridactyloptrix__hover-engine" ID="{E85E181C-E7F6-464C-B447-62BC9B659B0B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="hover_big" ID="{50D4D991-0A41-4DB2-9C8E-F57284244AA7}" ShortID="879830234">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-22</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="BigHover" ID="{97E491E8-97F3-4C79-B67F-916B271B8682}" WorkUnitID="{853FDF39-A89B-4DBC-95DD-BDD5C47876E9}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{59E413A0-C5AA-4EEB-ADC8-FC7C516A100C}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+							<ObjectRef Name="Large_Church1" ID="{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{776D1E1C-2F89-465A-AE8E-ED1C51C59DDC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="375963__glitchedtones__spacecraft-hover-01" ID="{4771226A-6CEC-4E66-A12F-105E92093CBF}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0.63965873015873"/>
+								<Property Name="LoopEnd" Type="Real64" Value="2.5175873015873"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>375963__glitchedtones__spacecraft-hover-01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="889791056"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="375963__glitchedtones__spacecraft-hover-01" ID="{4771226A-6CEC-4E66-A12F-105E92093CBF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -169,6 +169,10 @@ public class AircraftController : MonoBehaviour
     /// </summary>
     public void EnableRocket()
     {
+        if (!_rocketEnabled)
+        {
+            AkSoundEngine.PostEvent("Boost_Engine", gameObject);
+        }
         RocketBoostEffect.SetActive(true);
         _rocketEnabled = true;
     }
@@ -178,6 +182,10 @@ public class AircraftController : MonoBehaviour
     /// </summary>
     public void DisableRocket()
     {
+        if (_rocketEnabled)
+        {
+            AkSoundEngine.PostEvent("Stop_Boost_Engine", gameObject);
+        }
         RocketBoostEffect.SetActive(false);
         _rocketEnabled = false;
     }
@@ -189,6 +197,7 @@ public class AircraftController : MonoBehaviour
         Rigidbody.angularDrag = 0;
         Rigidbody.drag = 0;
         _aircraftAnimationController.FoldWings();
+        AkSoundEngine.PostEvent("Wing_Fold", gameObject);
     }
 
     public void UnflodWings()
@@ -197,6 +206,7 @@ public class AircraftController : MonoBehaviour
         Rigidbody.angularDrag = _originalAngularDrag;
         Rigidbody.drag = _originalLinearDrag;
         _aircraftAnimationController.UnfoldWings();
+        AkSoundEngine.PostEvent("Wing_Fold", gameObject);
     }
 
     private void OnDrawGizmos()

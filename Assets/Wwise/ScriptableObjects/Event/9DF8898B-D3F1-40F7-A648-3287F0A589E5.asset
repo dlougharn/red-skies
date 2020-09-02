@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a9ac18ef4b3e942850fbf66467cfe3, type: 3}
+  m_Name: 9DF8898B-D3F1-40F7-A648-3287F0A589E5
+  m_EditorClassIdentifier: 
+  objectName: Stop_Gun_Fire
+  id: 1434271473
+  guid: 9DF8898B-D3F1-40F7-A648-3287F0A589E5

@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8115d5402cc84145beffc019e70121e, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 64b4290eff84ce4fba954d9e72f8204e
+    GuidInternal: 
+    m_lastTime: -8586026105758609932
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 1c1e6d77892f5a46ae8eed1c51c59ddc
+    GuidInternal: 
+    m_lastTime: -8586026105759500135
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 1cccf5e9905fa54189b4a69a82239ac2
+    GuidInternal: 
+    m_lastTime: -8586026004120127539
+    List:
+    - name: MainGame
+      guid: 0d1c926efcf0da46a1a3114e7dd09149
+      id: 1731745708
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MainGame
+        ObjectType: 7
+      Path: Default Work Unit\MainGame
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: f2c61629da6dc74e8bc9670a07ab215e
+    GuidInternal: 
+    m_lastTime: -8586025963326202694
+    List:
+    - name: Big_Explosion
+      guid: 643a8027810a084087cb09810e7f7d42
+      id: 3743400261
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Big_Explosion
+        ObjectType: 3
+      Path: Default Work Unit\Big_Explosion
+      maxAttenuation: 0
+      maxDuration: 8.891995
+      minDuration: 8.891995
+    - name: Boost_Engine
+      guid: 3c16b3b2313c4946946e506fe1c5ca36
+      id: 1003595699
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Boost_Engine
+        ObjectType: 3
+      Path: Default Work Unit\Boost_Engine
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Dead
+      guid: 3610aeabeba4e647aabb9af51dfdb7c2
+      id: 2044049779
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dead
+        ObjectType: 3
+      Path: Default Work Unit\Dead
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Explosion
+      guid: a6566b4bfb64ed4cbfbbd664383e71c7
+      id: 13776098
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Explosion
+        ObjectType: 3
+      Path: Default Work Unit\Explosion
+      maxAttenuation: 0
+      maxDuration: 5.466823
+      minDuration: 5.466823
+    - name: Gun_Fire
+      guid: a5425439a9b9cb44808c0a8ccd601238
+      id: 2517641552
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gun_Fire
+        ObjectType: 3
+      Path: Default Work Unit\Gun_Fire
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Plane_Engine
+      guid: 273446fe12b7f24c93e44db84299fd4c
+      id: 2501370510
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Plane_Engine
+        ObjectType: 3
+      Path: Default Work Unit\Plane_Engine
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Boost_Engine
+      guid: 2dbd9a94d4839144aca3d21a184a046a
+      id: 1067196506
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Boost_Engine
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Boost_Engine
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Gun_Fire
+      guid: 8b89f89df1d3f740a6483287f0a589e5
+      id: 1434271473
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Gun_Fire
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Gun_Fire
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 61d1b16e8844c44dac750e00ccd26d3a
+    GuidInternal: 
+    m_lastTime: -8586026105758499912
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 075cfb340c1b8747afabfa186cad8445
+    GuidInternal: 
+    m_lastTime: -8586025997810380442
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 7bfa32dc1c7cdb4e94b11df23b73e8c4
+    GuidInternal: 
+    m_lastTime: -8586025997810460463
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 25c459724c39f04282d5949cba51a231
+    GuidInternal: 
+    m_lastTime: -8586026105758559929
+    List: []
+  ExpandedItems:
+  - /Red Skies_WwiseProject
+  - /Red Skies_WwiseProject/Events
+  - /Red Skies_WwiseProject/Events/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

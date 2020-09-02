@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a9ac18ef4b3e942850fbf66467cfe3, type: 3}
+  m_Name: 505E9C1D-CF2A-4374-ADD9-52B8EABC6E5D
+  m_EditorClassIdentifier: 
+  objectName: Stop_Hover_Big
+  id: 3314805725
+  guid: 505E9C1D-CF2A-4374-ADD9-52B8EABC6E5D

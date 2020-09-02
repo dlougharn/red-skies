@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E9F5CC1C-5F90-41A5-89B4-A69A82239AC2}" SchemaVersion="97">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{E9F5CC1C-5F90-41A5-89B4-A69A82239AC2}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="MainGame" ID="{6E921C0D-F0FC-46DA-A1A3-114E7DD09149}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Big_Explosion" ID="{27803A64-0A81-4008-87CB-09810E7F7D42}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Gun_Fire" ID="{9DF8898B-D3F1-40F7-A648-3287F0A589E5}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Bullet_Hit_Metal" ID="{C416FE64-D034-4233-B5D0-8E020455ECDB}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Hover_Big" ID="{505E9C1D-CF2A-4374-ADD9-52B8EABC6E5D}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Boost_Engine" ID="{949ABD2D-83D4-4491-ACA3-D21A184A046A}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Gun_Fire" ID="{395442A5-B9A9-44CB-808C-0A8CCD601238}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Hover_Small" ID="{EA682F3C-64E2-44D1-BCBF-DE8E874137BA}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Wing_Fold" ID="{B67B89EA-AF4A-450D-9BDA-852CB6AA9622}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Boost_Engine" ID="{B2B3163C-3C31-4649-946E-506FE1C5CA36}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Hover_Big" ID="{9F86E714-626B-47AF-8986-CE89B80C11F6}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Dead" ID="{ABAE1036-A4EB-47E6-AABB-9AF51DFDB7C2}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Hover_Small" ID="{62D54CC8-1457-4977-8D6A-4F133DA61BF0}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Laser_Gun_Fire" ID="{F087D36B-09AA-4C0D-BC14-F6612583EA48}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Explosion" ID="{4B6B56A6-64FB-4CED-BFBB-D664383E71C7}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Plane_Engine" ID="{FE463427-B712-4CF2-93E4-4DB84299FD4C}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Laser_Gun_Fire" ID="{73400488-E1FF-4F19-B23E-472F6767CC61}" WorkUnitID="{2916C6F2-6DDA-4EC7-8BC9-670A07AB215E}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
