@@ -12,7 +12,7 @@ public class OnProjectileHit : MonoBehaviour
         {
             var particleEffect = Instantiate(WaterParticleEffectPrefab, transform.position, transform.rotation);
             Destroy(particleEffect, 5f);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy")
         {

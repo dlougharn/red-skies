@@ -7,6 +7,8 @@ using System.Collections;
 /// </summary>
 public class Boid : MonoBehaviour
 {
+    public int Id;
+
     // To update:
     [HideInInspector]
     public Vector3 AvgFlockHeading;
@@ -21,13 +23,15 @@ public class Boid : MonoBehaviour
     private Transform _target;
     private Vector3 _velocity;
 
-    public void Initialize(BoidSettings boidSettings, Transform target)
+    public void Initialize(BoidSettings boidSettings, Transform target, int id)
     {
         _boidSettings = boidSettings;
         _target = target;
 
         var startSpeed = (_boidSettings.MinSpeed + _boidSettings.MaxSpeed) / 2;
         _velocity = transform.forward * startSpeed;
+
+        Id = id;
     }
 
     public void UpdateBoid()

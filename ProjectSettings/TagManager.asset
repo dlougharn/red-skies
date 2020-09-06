@@ -17,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - Projectile
-  - 
-  - 
+  - EnemyProjectile
+  - Enemy
+  - PlayerProjectile
   - 
   - 
   - 

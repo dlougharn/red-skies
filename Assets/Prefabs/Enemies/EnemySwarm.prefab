@@ -55,7 +55,7 @@ MonoBehaviour:
     TargetWeight: 0.1
     ObstacleMask:
       serializedVersion: 2
-      m_Bits: 55
+      m_Bits: 567
     BoundsRadius: 5
     AvoidCollisionWeight: 250
     CollisionAvoidDst: 20

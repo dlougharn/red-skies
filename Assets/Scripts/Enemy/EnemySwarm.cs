@@ -16,14 +16,19 @@ public class EnemySwarm : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        _initialMotherShipHealth = MotherShip.MaxHealth;
+        if (MotherShip != null)
+        {
+            _initialMotherShipHealth = MotherShip.MaxHealth;
+        }
         _boids = new List<Boid>();
+        var index = 0;
         foreach (Transform child in transform)
         {
             var boid = child.GetComponent<Boid>();
             if (boid != null)
             {
-                boid.Initialize(EnemyBoidSettings, MotherShip.transform);
+                index++;
+                boid.Initialize(EnemyBoidSettings, MotherShip?.transform, index);
                 _boids.Add(boid);
             }
         }
@@ -41,39 +46,10 @@ public class EnemySwarm : MonoBehaviour
             }
         }
 
-        foreach (var boidA in _boids)
+        foreach (var boid in _boids)
         {
-            //Boid was destroyed
-            if (boidA == null)
-            {
-                continue;
-            }
-
-            foreach (var boidB in _boids)
-            {
-                if (boidB == null)
-                {
-                    continue;
-                }
-
-                if (boidA != boidB)
-                {
-                    var offset = boidB.transform.position - boidA.transform.position;
-                    var sqrDst = offset.x * offset.x + offset.y * offset.y + offset.z * offset.z;
-
-                    if (sqrDst < EnemyBoidSettings.PerceptionRadius * EnemyBoidSettings.PerceptionRadius)
-                    {
-                        boidA.NumPerceivedFlockmates += 1;
-                        boidA.AvgFlockHeading += boidB.transform.forward;
-                        boidA.CentreOfFlockmates += boidB.transform.position;
-
-                        if (sqrDst < EnemyBoidSettings.AvoidanceRadius * EnemyBoidSettings.AvoidanceRadius)
-                        {
-                            boidA.AvgAvoidanceHeading -= offset / sqrDst;
-                        }
-                    }
-                }
-            }
+            UpdateBoid(boid);
+            //StartCoroutine(UpdateBoid(boid));
         }
 
         var target = GetBoidTarget();
@@ -91,6 +67,43 @@ public class EnemySwarm : MonoBehaviour
                 gunController.DisableGun();
             }
         }
+    }
+
+    private IEnumerator UpdateBoid(Boid boidToUpdate)
+    {
+        //Boid was destroyed
+        if (boidToUpdate == null)
+        {
+            yield return null;
+        }
+
+        foreach (var boid in _boids)
+        {
+            if (boid == null)
+            {
+                continue;
+            }
+
+            if (boidToUpdate.Id != boid.Id)
+            {
+                var offset = boid.transform.position - boidToUpdate.transform.position;
+                var sqrDst = offset.x * offset.x + offset.y * offset.y + offset.z * offset.z;
+
+                if (sqrDst < EnemyBoidSettings.PerceptionRadius * EnemyBoidSettings.PerceptionRadius)
+                {
+                    boidToUpdate.NumPerceivedFlockmates += 1;
+                    boidToUpdate.AvgFlockHeading += boid.transform.forward;
+                    boidToUpdate.CentreOfFlockmates += boid.transform.position;
+
+                    if (sqrDst < EnemyBoidSettings.AvoidanceRadius * EnemyBoidSettings.AvoidanceRadius)
+                    {
+                        boidToUpdate.AvgAvoidanceHeading -= offset / sqrDst;
+                    }
+                }
+            }
+        }
+
+        yield return null;
     }
 
     private Transform GetBoidTarget()

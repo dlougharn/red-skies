@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.3921569, g: 0.25882354, b: 0.28235295, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.0005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -1040,7 +1040,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.5855287, g: 0.9622642, b: 0.94438094, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.12
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5749,7 +5749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsPlayer: 0
   DamageOnHit: 1
-  MaxHealth: 10
+  MaxHealth: 250
   CurrentHealth: 0
   DeathParticleEffect: {fileID: 2604682641506716420, guid: 475a96f7a2d191340b920044af6a6d11,
     type: 3}
@@ -7184,6 +7184,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EngineThrustPower: 1000000
   RocketThrustPower: 2000000
+  MaxRocketFuel: 100
+  CurrentRocketFuel: 0
+  RocketRefuelRate: 10
+  RocketFuelDepletionRate: 20
+  RocketCooldownTime: 1
   PitchPower: 80000
   RollPower: 60000
   YawPower: 60000
@@ -7244,8 +7249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d659e368cbc494082eb73eecb40da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 5920855982985038388, guid: a23f7293153405b43a7ae1bf3220e566,
-    type: 3}
+  ProjectileTag: PlayerProjectile
   ProjectileSpawnLocations:
   - {fileID: 774897112}
   - {fileID: 1524531290}
@@ -7570,6 +7574,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 7988b000bab7485488cda83deea5ea02, type: 3}
+--- !u!1 &758644137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758644139}
+  - component: {fileID: 758644138}
+  m_Layer: 0
+  m_Name: ObjectPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &758644138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758644137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0be623e43d0544da330f2d16ed9ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnedObjectCount: 0
+  ObjectPools:
+  - GameObjectTag: EnemyProjectile
+    Prefab: {fileID: 5920855982985038388, guid: dd54203bf5106e3418ed12ecdd063fcf,
+      type: 3}
+    Size: 5000
+  - GameObjectTag: PlayerProjectile
+    Prefab: {fileID: 5920855982985038388, guid: a23f7293153405b43a7ae1bf3220e566,
+      type: 3}
+    Size: 5000
+--- !u!4 &758644139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758644137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &758738540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10252,13 +10309,13 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_RenderPostProcessing: 1
-  m_Antialiasing: 0
+  m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0

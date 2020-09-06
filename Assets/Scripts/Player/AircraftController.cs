@@ -8,6 +8,11 @@ public class AircraftController : MonoBehaviour
 
     public float EngineThrustPower;
     public float RocketThrustPower;
+    public float MaxRocketFuel;
+    public float CurrentRocketFuel;
+    public float RocketRefuelRate;
+    public float RocketFuelDepletionRate;
+    public float RocketCooldownTime;
     public float PitchPower;
     public float RollPower;
     public float YawPower;
@@ -23,6 +28,7 @@ public class AircraftController : MonoBehaviour
     private bool _wingsFolded = false;
     private float _aspectRatio;
     private bool _rocketEnabled = false;
+    private float _timeSinceRocketEnable = 0;
     private float _originalAngularDrag;
     private float _originalLinearDrag;
     private Vector3 _liftVector;
@@ -38,10 +44,12 @@ public class AircraftController : MonoBehaviour
         _originalLinearDrag = Rigidbody.drag;
         RocketBoostEffect.SetActive(false);
         _aircraftAnimationController = GetComponent<AircraftAnimationController>();
+        CurrentRocketFuel = MaxRocketFuel;
     }
 
     private void FixedUpdate()
     {
+        UpdateRocketFuel();
         if (!_wingsFolded)
         {
             CalculateForces();
@@ -49,6 +57,25 @@ public class AircraftController : MonoBehaviour
         if (_rocketEnabled)
         {
             Rigidbody.AddForce(transform.forward * RocketThrustPower);
+        }
+    }
+
+    private void UpdateRocketFuel()
+    {
+        _timeSinceRocketEnable += Time.deltaTime;
+        var currentRocketFuel = CurrentRocketFuel;
+        if (_rocketEnabled)
+        {
+            currentRocketFuel -= Time.deltaTime * RocketFuelDepletionRate;
+        }
+        else
+        {
+            currentRocketFuel += Time.deltaTime * RocketRefuelRate;
+        }
+        CurrentRocketFuel = Mathf.Clamp(currentRocketFuel, 0, MaxRocketFuel);
+        if (CurrentRocketFuel == 0)
+        {
+            DisableRocket();
         }
     }
 
@@ -169,9 +196,15 @@ public class AircraftController : MonoBehaviour
     /// </summary>
     public void EnableRocket()
     {
+        if (_timeSinceRocketEnable < RocketCooldownTime)
+        {
+            return;
+        }
+
         if (!_rocketEnabled)
         {
             AkSoundEngine.PostEvent("Boost_Engine", gameObject);
+            _timeSinceRocketEnable = 0;
         }
         RocketBoostEffect.SetActive(true);
         _rocketEnabled = true;
@@ -185,6 +218,7 @@ public class AircraftController : MonoBehaviour
         if (_rocketEnabled)
         {
             AkSoundEngine.PostEvent("Stop_Boost_Engine", gameObject);
+            _timeSinceRocketEnable = 0;
         }
         RocketBoostEffect.SetActive(false);
         _rocketEnabled = false;

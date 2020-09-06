@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-
-    public GameObject ProjectilePrefab;
+    public string ProjectileTag;
     public List<Transform> ProjectileSpawnLocations;
     public float ShootForce = 1000f;
     public float FireRate = 3f;
@@ -17,12 +16,14 @@ public class GunController : MonoBehaviour
     private float _timeBetweenShots = 1f;
     private int _projectileSpawnIndex = 0;
     private Rigidbody _rigidbody;
+    private ObjectPooler _objectPooler;
 
     // Start is called before the first frame update
     void Start()
     {
         _timeBetweenShots = 1f / FireRate;
         _rigidbody = GetComponent<Rigidbody>();
+        _objectPooler = ObjectPooler.Instance;
     }
 
     // Update is called once per frame
@@ -49,7 +50,7 @@ public class GunController : MonoBehaviour
 
     private void FireProjectile()
     {
-        var projectile = Instantiate(ProjectilePrefab, ProjectileSpawnLocations[_projectileSpawnIndex].position, transform.rotation);
+        var projectile = _objectPooler.SpawnFromPool(ProjectileTag, ProjectileSpawnLocations[_projectileSpawnIndex].position, transform.rotation);
         var rigidBody = projectile.GetComponent<Rigidbody>();
         if (_rigidbody != null)
         {
@@ -63,7 +64,13 @@ public class GunController : MonoBehaviour
 
         rigidBody.AddForce(projectileDirection * ShootForce);
 
-        Destroy(projectile, ProjectileLifetime);
+        RemoveProjectile(projectile, ProjectileLifetime);
+    }
+
+    private IEnumerator RemoveProjectile(GameObject projectile, float time)
+    {
+        yield return new WaitForSeconds(time);
+        projectile.SetActive(false);
     }
 
     public void EnableGun()
@@ -74,10 +81,5 @@ public class GunController : MonoBehaviour
     public void DisableGun()
     {
         _gunEnabled = false;
-    }
-
-    private void UpdateSound()
-    {
-
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
+    public delegate void DamageTaken(float currentHealth, float maxHealth);
+    public event DamageTaken OnDamageTaken;
+
     public bool IsPlayer;
     public float DamageOnHit = 1f;
     public float MaxHealth = 50;
@@ -38,6 +41,7 @@ public class HealthController : MonoBehaviour
         if (collision.gameObject.tag == _damageTag)
         {
             CurrentHealth -= DamageOnHit;
+            OnDamageTaken?.Invoke(CurrentHealth, MaxHealth);
             if (CurrentHealth <= 0)
             {
                 var particleEffect = Instantiate(DeathParticleEffect, transform.position, transform.rotation);
